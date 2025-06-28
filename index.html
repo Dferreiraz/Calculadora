@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .calculadora {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+    .display {
+      background: #000;
+      color: #0f0;
+      font-size: 2em;
+      text-align: right;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      height: 50px;
+    }
+    .botoes button {
+      width: 60px;
+      height: 60px;
+      font-size: 1.5em;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #444;
+      color: white;
+      cursor: pointer;
+    }
+    .botoes button:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculadora">
+    <div class="display" id="display">0</div>
+    <div class="botoes">
+      <button onclick="limpar()">C</button>
+      <button onclick="apagar()">←</button>
+      <button onclick="adicionar('/')">÷</button>
+      <button onclick="adicionar('*')">×</button><br>
+      
+      <button onclick="adicionar('7')">7</button>
+      <button onclick="adicionar('8')">8</button>
+      <button onclick="adicionar('9')">9</button>
+      <button onclick="adicionar('-')">−</button><br>
+      
+      <button onclick="adicionar('4')">4</button>
+      <button onclick="adicionar('5')">5</button>
+      <button onclick="adicionar('6')">6</button>
+      <button onclick="adicionar('+')">+</button><br>
+      
+      <button onclick="adicionar('1')">1</button>
+      <button onclick="adicionar('2')">2</button>
+      <button onclick="adicionar('3')">3</button>
+      <button onclick="calcular()">=</button><br>
+      
+      <button onclick="adicionar('0')" style="width: 132px">0</button>
+      <button onclick="adicionar('.')">.</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+
+    function adicionar(valor) {
+      if (display.innerText === '0') {
+        display.innerText = valor;
+      } else {
+        display.innerText += valor;
+      }
+    }
+
+    function limpar() {
+      display.innerText = '0';
+    }
+
+    function apagar() {
+      display.innerText = display.innerText.slice(0, -1) || '0';
+    }
+
+    function calcular() {
+      try {
+        display.innerText = eval(display.innerText).toString();
+      } catch {
+        display.innerText = 'Erro';
+      }
+    }
+  </script>
+
+</body>
+</html>
