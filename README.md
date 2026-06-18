@@ -6,7 +6,6 @@ Ideal para prática inicial e compreensão da estrutura básica de páginas web.
 # O que faz
 - Interface visual de uma calculadora
 - Botões de números e operações matemáticas
-- Sem uso de CSS externo ou JavaScript
 
 # Arquivo
 - `index.html` — esqueleto do site
