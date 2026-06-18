@@ -1,6 +1,6 @@
-# Calculadora em HTML
+# Calculadora
 
-Projeto de uma calculadora feita **somente com HTML**.  
+Projeto de uma calculadora feita com **HTML, CSS e JavaScript**.  
 Ideal para prática inicial e compreensão da estrutura básica de páginas web.
 
 # O que faz
@@ -9,7 +9,8 @@ Ideal para prática inicial e compreensão da estrutura básica de páginas web.
 - Sem uso de CSS externo ou JavaScript
 
 # Arquivo
-- `index.html` — tudo em um único arquivo
+- `index.html` — esqueleto do site
+- `src` - pasta com css e js
 
 # Autor
 Davi Roberto de Almeida Ferreira
